@@ -1,0 +1,28 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Reports (generated output — don't commit scan results)
+reports/*.json
+reports/*.csv
+!reports/.gitkeep
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+
+# Env files
+.env
