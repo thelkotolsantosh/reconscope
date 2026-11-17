@@ -27,16 +27,16 @@ def _resolve(domain: str,  record_type: str, timeout: float) -> List[str]:
     dns.exception.Timeout,
   ):
     return[]
-  except Exception;
+  except Exception:
   #Any unexcepted resolver error should not crash the scan
-  return[]
+    return[]
 
-  def enumerate)dns(domain:str, timeout:float = 5.0) -> Dict{str, List[str]]:
+def enumerate_dns(domain:str, timeout:float = 5.0) -> Dict[str, List[str]]:
   """Return a mapping of record type -> list of values for the domain"""
   results: Dict[str, List[str]] = {}
   for record_type in RECORD_TYPES:
     values = _resolve(domain, record_type, timeout)
     if values:
       results[record_type] = values
-      return results
+  return results
     
